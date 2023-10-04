@@ -1,0 +1,73 @@
+[
+    {
+        "name": "Dashboard",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor",
+            "User"
+        ]
+    },
+    {
+        "name": "Cms",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor"
+        ]
+    },
+    {
+        "name": "Registration",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor"
+        ]
+    },
+    {
+        "name": "Article",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor"
+        ]
+    },
+    {
+        "name": "Access Controls",
+        "roles": [
+            "Super Admin",
+            "Admin"
+        ]
+    },
+    {
+        "name": "Core Settings",
+        "roles": [
+            "Super Admin"
+        ]
+    },
+    {
+        "name": "Common Settings",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor"
+        ]
+    },
+    {
+        "name": "App Settings",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor"
+        ]
+    },
+    {
+        "name": "My Profile",
+        "roles": [
+            "Super Admin",
+            "Admin",
+            "Editor",
+            "User"
+        ]
+    }
+]

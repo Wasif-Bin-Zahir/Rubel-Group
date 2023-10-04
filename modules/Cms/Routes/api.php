@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Http\Request;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+*/
+
+// Slider routes...
+Route::apiResource('slider', 'Api\SliderController');
+// PageCategory routes...
+Route::apiResource('page-category', 'Api\PageCategoryController');
+// Page routes...
+Route::apiResource('page', 'Api\PageController');
+// ContentCategory routes...
+Route::apiResource('content-category', 'Api\PublicationCategoryController');
+// Content routes...
+Route::apiResource('content', 'Api\PublicationController');
+// ArticleCategory routes...
+Route::apiResource('article-type', 'Api\ArticleTypeController');
+// Article routes...
+Route::apiResource('article', 'Api\ArticleController');
+// Faq routes...
+Route::apiResource('faq', 'Api\FaqController');
+// Testimonial routes...
+Route::apiResource('testimonial', 'Api\TestimonialController');
+// CommitteeCategory routes...
+Route::apiResource('committee-category', 'Api\CommitteeCategoryController');
+// CommitteeMember routes...
+Route::apiResource('committee-member', 'Api\CommitteeMemberController');
+// Form routes...
+Route::apiResource('form', 'Api\FormController');
