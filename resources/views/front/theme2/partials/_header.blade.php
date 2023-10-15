@@ -124,157 +124,51 @@
 
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle active">
-                                    Home
-                                </a>
-                                <!-- <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="index-2.html" class="nav-link active">Home Demo - 1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-3.html" class="nav-link">Home Demo - 2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="index-4.html" class="nav-link">Home Demo - 3</a>
-                                    </li>
-                                </ul> -->
-                            </li>
-                            <li class="nav-item">
-                                <a href="about-us.html" class="nav-link">About Us</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">
-                                    Services
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="services-style-one.html" class="nav-link">Services Style One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="services-style-two.html" class="nav-link">Services Style Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="service-details.html" class="nav-link">Service Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">
-                                    Portfolio
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="portfolio-style-one.html" class="nav-link">Portfolio Style One</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="portfolio-style-two.html" class="nav-link">Portfolio Style Two</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="portfolio-details.html" class="nav-link">Portfolio Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">
-                                    Pages
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link dropdown-toggle">
-                                            Team
-                                        </a>
-
-                                        <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">
+                                Home
+                            </a>
+                        </li>
+                        @foreach($global_menu as $g_key => $g_menu)
+                            @if(count($g_menu->children))
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-toggle">
+                                        @if(app()->getLocale() == 'bn')
+                                            {{ $g_menu->title_bn }}
+                                        @else
+                                            {{ $g_menu->title }}
+                                        @endif
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        @foreach($g_menu->children as $g_child_key => $g_child_menu)
                                             <li class="nav-item">
-                                                <a href="team-style-one.html" class="nav-link">Team Style One</a>
+                                                <a href="{{ $g_child_menu->link }}" class="nav-link">
+                                                    @if(app()->getLocale() == 'bn')
+                                                        {{ $g_child_menu->title_bn }}
+                                                    @else
+                                                        {{ $g_child_menu->title }}
+                                                    @endif
+                                                </a>
                                             </li>
-
-                                            <li class="nav-item">
-                                                <a href="team-style-two.html" class="nav-link">Team Style Two</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="pricing.html" class="nav-link">Pricing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="testimonials.html" class="nav-link">Testimonials</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">FAQ</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link dropdown-toggle">
-                                            Users
-                                        </a>
-
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="login.html" class="nav-link">Login</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a href="register.html" class="nav-link">Register</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a href="recover-password.html" class="nav-link">Recover Password</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="terms-conditions.html" class="nav-link">Terms And Conditions</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="404.html" class="nav-link">404 Page</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">
-                                    Blog
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="blog-grid.html" class="nav-link">Blog Grid</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="blog-right-sidebar.html" class="nav-link">Blog Right Sidebar</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="blog-details.html" class="nav-link">Blog Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="contact-us.html" class="nav-link">Contact Us</a>
-                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @else
+                                <li class="nav-item"> 
+                                    <a href="{{ $g_menu->link }}" class="nav-link">
+                                        @if(app()->getLocale() == 'bn')
+                                            {{ $g_menu->title_bn }}
+                                        @else
+                                            {{ $g_menu->title }}
+                                        @endif
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                            
                         </ul>
 
-                        <div class="others-options ms-auto">
+                        <!-- <div class="others-options ms-auto">
                             <div class="option-item">
                                 <a href="contact-us.html" class="default-btn btn style-2">Get Started Now <i
                                         class="ri-arrow-right-line"></i></a>
@@ -287,7 +181,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </nav>
             </div>

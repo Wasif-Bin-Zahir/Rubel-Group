@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="{{ asset('front/theme2/assets/css/dark.css')}}">
     <!--Responsive css-->
     <link rel="stylesheet" href="{{ asset('front/theme2/assets/css/responsive.css')}}">
-    <title>Irise - Staffing & Consulting Agency HTML Template</title>
+    <title>Rubel Group Bangladesh</title>
     <link rel="icon" type="image/png" href="{{ asset('front/theme2/assets/images/favicon.png')}}">
 
     @yield('css')
@@ -40,11 +40,11 @@
     <div class="preloader clock text-center">
         <div class="organiaLoader">
             <div class="loaderO">
-                <span>I</span>
                 <span>R</span>
-                <span>I</span>
-                <span>S</span>
+                <span>U</span>
+                <span>B</span>
                 <span>E</span>
+                <span>L</span>
             </div>
         </div>
     </div>
