@@ -21,6 +21,11 @@ Route::get('register', function () {
 Route::get('password/reset', function () {
     abort(404);
 });
+
+Route::get('test-route', function () {
+    return 'test-route';
+});
+
 Route::get('stlink', function () {
     $exitCode = \Artisan::call('storage:link');
     // symlink('/home/challen1/demo.cse-alumni-mbstu.org/storage/app/public', '/home/challen1/public_html');
