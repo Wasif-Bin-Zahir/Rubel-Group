@@ -23,20 +23,20 @@
                                 <div class="social-content">
                                     <ul>
                                         <li>
-                                            <a href="https://www.facebook.com/" target="_blank"><i
+                                            <a href="<?php echo e($global_contact->facebook); ?>" target="_blank"><i
                                                     class="ri-facebook-line"></i></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.twitter.com/" target="_blank"><i
+                                            <a href="<?php echo e($global_contact->twitter); ?>" target="_blank"><i
                                                     class="ri-twitter-line"></i></a>
                                         </li>
                                         <li>
-                                            <a href="https://instagram.com/?lang=en" target="_blank"><i
-                                                    class="ri-instagram-line"></i></a>
+                                            <a href="<?php echo e($global_contact->linkedin); ?>" target="_blank"><i
+                                                    class="ri-linkedin-line"></i></a>
                                         </li>
                                         <li>
-                                            <a href="https://linkedin.com/?lang=en" target="_blank"><i
-                                                    class="ri-linkedin-line"></i></a>
+                                            <a href="<?php echo e($global_contact->facebook); ?>" target="_blank"><i
+                                                    class="ri-youtube-line"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -55,8 +55,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-4">
                     <div class="middle-header-logo">
-                        <img src="assets/images/rubel_logo.png" class="logo-1 nav-logo" alt="Logo">
+                        <a href="/">
+                        <img src="/front/theme2/assets/images/rubel_logo.png" class="logo-1 nav-logo" alt="Logo">
                         <img src="assets/images/white-logo.png" class="logo-2 nav-logo" alt="Logo">
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -68,7 +70,7 @@
                                         <i class="flaticon-phone-call-1"></i>
                                     </div>
                                     <p>Call Us Now</p>
-                                    <a href="tel:+0408886666">+040 888 6666</a>
+                                    <a href="tel:<?php echo e($global_contact->phone); ?>"><?php echo e($global_contact->phone); ?></a>
                                 </div>
                             </li>
                             <li>
@@ -78,9 +80,9 @@
                                     </div>
                                     <p>Email Address</p>
                                     <a
-                                        href="https://templates.hibotheme.com/cdn-cgi/l/email-protection#ee868b828281aea79c879d8bc08d8183"><span
+                                        href="<?php echo e($global_contact->email); ?>"><span
                                             class="__cf_email__"
-                                            data-cfemail="49212c25252609003b203a2c672a2624">[email&#160;protected]</span></a>
+                                            data-cfemail="49212c25252609003b203a2c672a2624"><?php echo e($global_contact->email); ?></span></a>
                                 </div>
                             </li>
                             <li>
@@ -89,7 +91,7 @@
                                         <i class="flaticon-place"></i>
                                     </div>
                                     <p>Address</p>
-                                    <span>204 Protector Here, USA</span>
+                                    <span><?php echo e($global_contact->address); ?></span>
                                 </div>
                             </li>
                         </ul>

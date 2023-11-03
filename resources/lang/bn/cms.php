@@ -39,7 +39,7 @@ return [
     "notice" => "নোটিশ",
     "faq" => "সচরাচর জানতে চওয়া",
     "service" => "সার্ভিস",
-    "committee" => "টিম",
+    "committee" => "সদস্য",
     "view_all" => "সবগুলো দেখুন",
     "about_organiser" => "সংগঠক সম্পর্কে",
     "archives" => "আর্কাইভ ইভেন্ট",

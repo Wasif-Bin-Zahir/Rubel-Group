@@ -6,54 +6,30 @@
     <!--Start banner Area-->
     <div class="banner-area">
         <div class="hero-slider owl-carousel owl-theme">
-            <div class="slider-item bg-1">
-                <div class="container-fluid">
-                    <div class="banner-content">
-                        <h1>Create Your Own Novelty And Digital Future</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim vitae risus
-                            non, imperdiet pharetra lorem. Sed ut lacus aliquet, volutpat sem pellentesque, egestas
-                            nisl.</p>
-                        <div class="banner-btn">
-                            <a href="contact-us.html" class="default-btn btn active mr-20">Contact Us <i
-                                    class="ri-arrow-right-line"></i></a>
-                            <a href="contact-us.html" class="default-btn btn style-2">Explore More <i
-                                    class="ri-arrow-right-line"></i></a>
+            <?php $__currentLoopData = $data->sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="slider-item bg-1" style="background-image:url(<?php echo e($slider->image->file_url ?? url('images/default/thumb_3.jpg')); ?>) !important">
+                    <div class="container-fluid">
+                        <div class="banner-content">
+                            <h1><?php if(app()->getLocale() == 'bn'): ?>
+                                <?php echo e($slider->title_bn ?? $slider->title); ?>
+
+                            <?php else: ?>
+                                <?php echo e($slider->title); ?>
+
+                            <?php endif; ?></h1>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim vitae risus
+                                non, imperdiet pharetra lorem. Sed ut lacus aliquet, volutpat sem pellentesque, egestas
+                                nisl.</p> -->
+                            <div class="banner-btn">
+                                <a href="/contact" class="default-btn btn active mr-20">Contact Us <i
+                                        class="ri-arrow-right-line"></i></a>
+                                <!-- <a href="contact-us.html" class="default-btn btn style-2">Explore More <i
+                                        class="ri-arrow-right-line"></i></a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="slider-item bg-2">
-                <div class="container-fluid">
-                    <div class="banner-content">
-                        <h1>The Smartest Way Serve Digital Marketing</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim vitae risus
-                            non, imperdiet pharetra lorem. Sed ut lacus aliquet, volutpat sem pellentesque, egestas
-                            nisl.</p>
-                        <div class="banner-btn">
-                            <a href="contact-us.html" class="default-btn btn active mr-20">Contact Us <i
-                                    class="ri-arrow-right-line"></i></a>
-                            <a href="contact-us.html" class="default-btn btn style-2">Explore More <i
-                                    class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-item bg-3">
-                <div class="container-fluid">
-                    <div class="banner-content">
-                        <h1>The Smartest Way Serve Digital Marketing</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim vitae risus
-                            non, imperdiet pharetra lorem. Sed ut lacus aliquet, volutpat sem pellentesque, egestas
-                            nisl.</p>
-                        <div class="banner-btn">
-                            <a href="contact-us.html" class="default-btn btn active mr-20">Contact Us <i
-                                    class="ri-arrow-right-line"></i></a>
-                            <a href="contact-us.html" class="default-btn btn style-2">Explore More <i
-                                    class="ri-arrow-right-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
     </div>
     <!--End banner Area-->
@@ -64,19 +40,25 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-image-content pr-15">
-                        <img src="<?php echo e(asset('assets/images/about/about-img-1.png')); ?>" alt="Image">
+                        <img src="<?php echo e($data->welcomeMessage->image->file_url ?? url('images/default/thumbnail.jpeg')); ?>" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-content pl-15">
                         <div class="about-title">
-                            <span>About The Company</span>
-                            <h2>We Are The Administration's Best Marketing Team</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim phareta
-                                lorem. Sed ut lacus aliquet, volutpat sem pellentesque, egestas.</p>
+                            <span>Chairman Message</span>
+                            <h2><?php if(app()->getLocale() == 'bn'): ?>
+                                            <?php echo e($data->welcomeMessage->title_bn ?? $data->welcomeMessage->title); ?>
+
+                                        <?php else: ?>
+                                            <?php echo e($data->welcomeMessage->title); ?>
+
+                                        <?php endif; ?></h2>
+                            <?php echo $data->welcomeMessage->description; ?>
+
                         </div>
 
-                        <div class="about-features">
+                        <!-- <div class="about-features">
                             <ul>
                                 <li>
                                     <div class="icon">
@@ -103,8 +85,8 @@
                                         lorem. Sed ut lacus aliquet, volutpat egestas.</p>
                                 </li>
                             </ul>
-                        </div>
-                        <a href="about-us.html" class="default-btn btn">Explore More <i
+                        </div> -->
+                        <a href="/page/message" class="default-btn btn">Explore More <i
                                 class="ri-arrow-right-line"></i></a>
                     </div>
                 </div>
@@ -204,13 +186,13 @@
                 <div class="col-lg-6">
                     <div class="who-we-are-content pr-15">
                         <div class="who-we-are-title">
-                            <span>Who We Are</span>
-                            <h2>Our Professional Creative Digital Representation Team</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim phareta
-                                lorem. Sed ut lacus aliquet, volutpat sem pellentesque, egestas nisl.</p>
+                            <!-- <span>About Organization</span> -->
+                            <h2>About Organization</h2>
+                            <?php echo $data->aboutorganiser->description; ?>
+
                         </div>
 
-                        <div class="who-we-are-features">
+                        <!-- <div class="who-we-are-features">
                             <ul>
                                 <li>
                                     <div class="icon">
@@ -245,14 +227,14 @@
                                         lorem. Sed ut lacus aliquet, volutpat egestas.</p>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="who-we-are-img pl-15">
-                        <img src="<?php echo e(asset('assets/images/choose/choose-img-1.png')); ?>" alt="Image">
+                        <img src="<?php echo e($data->aboutorganiser->image->file_url ?? url('images/default/thumbnail.jpeg')); ?>" alt="Image">
                         <div class="shape-1">
-                            <img src="<?php echo e(asset('assets/images/shape/shape-1.png')); ?>" alt="Image">
+                            <img src="<?php echo e($data->aboutorganiser->image->file_url ?? url('images/default/thumbnail.jpeg')); ?>" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -325,136 +307,59 @@
         <div class="container">
             <div class="section-title">
                 <span>Meet The Team</span>
-                <h2>Professional Creative Members</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim phareta lorem. Sed ut
-                    lacus aliquet, volutpat sem pellentesque, egestas nisl.</p>
+                <h2>Our Members</h2>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus, dignissim phareta lorem. Sed ut
+                    lacus aliquet, volutpat sem pellentesque, egestas nisl.</p> -->
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
-                    <div class="single-team-card">
-                        <div class="team-img">
-                            <img src="<?php echo e(asset('assets/images/team/team-img-1.jpg')); ?>" alt="Image">
-                            <div class="social-content">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank"><i
-                                                class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://instagram.com/?lang=en" target="_blank"><i
-                                                class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://linkedin.com/?lang=en" target="_blank"><i
-                                                class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
+                <?php $__currentLoopData = $data->committeeMembers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $committeeMember): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                        <div class="single-team-card">
+                            <div class="team-img">
+                                <img src="<?php echo e($committeeMember->avatar->file_url ?? url('images/default/avatar.jpg')); ?>" alt="Image">
+                                <div class="social-content">
+                                    <ul>
+                                        <li>
+                                            <a href="<?php echo e($committeeMember->facebook!=''?$committeeMember->facebook:'#'); ?>" target="_blank"><i
+                                                    class="ri-facebook-line"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo e($committeeMember->twitter!=''?$committeeMember->twitter:'#'); ?>" target="_blank"><i
+                                                    class="ri-twitter-line"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo e($committeeMember->linkedin!=''?$committeeMember->linkedin:'#'); ?>" target="_blank"><i
+                                                    class="ri-linkedin-line"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:<?php echo e($committeeMember->email!=''?$committeeMember->email:'#'); ?>" target="_blank"><i
+                                                    class="ri-mail-line"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h3><?php if(app()->getLocale() == 'bn'): ?>
+                                                <?php echo e($committeeMember->name_bn ?? $committeeMember->name); ?>
+
+                                            <?php else: ?>
+                                                <?php echo e($committeeMember->name); ?>
+
+                                            <?php endif; ?></h3>
+                                <span> <?php if(app()->getLocale() == 'bn'): ?>
+                                                <?php echo e($committeeMember->designation_bn ?? $committeeMember->designation); ?>
+
+                                            <?php else: ?>
+                                                <?php echo e($committeeMember->designation); ?>
+
+                                            <?php endif; ?></span>
                             </div>
                         </div>
-                        <div class="team-content">
-                            <h3>Demond Feil</h3>
-                            <span>CO Founder</span>
-                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
-                    <div class="single-team-card">
-                        <div class="team-img">
-                            <img src="<?php echo e(asset('assets/images/team/team-img-2.jpg')); ?>" alt="Image">
-                            <div class="social-content">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank"><i
-                                                class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://instagram.com/?lang=en" target="_blank"><i
-                                                class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://linkedin.com/?lang=en" target="_blank"><i
-                                                class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3>Gardner Mohr</h3>
-                            <span>Chief Officer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
-                    <div class="single-team-card">
-                        <div class="team-img">
-                            <img src="<?php echo e(asset('assets/images/team/team-img-3.jpg')); ?>" alt="Image">
-                            <div class="social-content">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank"><i
-                                                class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://instagram.com/?lang=en" target="_blank"><i
-                                                class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://linkedin.com/?lang=en" target="_blank"><i
-                                                class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3>Kyra Bergnaum</h3>
-                            <span>Creative Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
-                    <div class="single-team-card">
-                        <div class="team-img">
-                            <img src="<?php echo e(asset('assets/images/team/team-img-4.jpg')); ?>" alt="Image">
-                            <div class="social-content">
-                                <ul>
-                                    <li>
-                                        <a href="https://www.facebook.com/" target="_blank"><i
-                                                class="ri-facebook-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.twitter.com/" target="_blank"><i
-                                                class="ri-twitter-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://instagram.com/?lang=en" target="_blank"><i
-                                                class="ri-instagram-line"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://linkedin.com/?lang=en" target="_blank"><i
-                                                class="ri-linkedin-line"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content">
-                            <h3>Joey Hilpert</h3>
-                            <span>Web Designer</span>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
+            <a href="/members" class="default-btn btn">Explore More <i
+                                class="ri-arrow-right-line"></i></a>
         </div>
     </div>
     <!--End Team area-->

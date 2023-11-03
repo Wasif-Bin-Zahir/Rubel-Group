@@ -1,4 +1,4 @@
-@extends('front.theme1.layouts.master')
+@extends('front.theme2.layouts.master')
 
 @section('content')
     <div class="breadcrumbs bread-blog">

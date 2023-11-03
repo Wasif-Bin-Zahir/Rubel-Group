@@ -80,30 +80,14 @@
                 .caption {
                     width: 100%;
                     margin-left: 0%;
-<<<<<<< HEAD
-                    padding:0;
-                    
-=======
                     padding: 2px;
 
 
->>>>>>> c9405acc3b80b070d03f6f1e45afdfb5f6965fec
                 }
 
                 .caption h4 {
                     margin: 0;
-<<<<<<< HEAD
-                    font-size:10px;
-                }
-                
-                .slides .slide img {
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-height:215px;
-=======
                     font-size: 10px;
->>>>>>> c9405acc3b80b070d03f6f1e45afdfb5f6965fec
                 }
 
                 .slides .slide img {
@@ -444,44 +428,15 @@ height:215px;
 
                         {{-- count down end --}}
                         <div style="margin-bottom: 20px;">
-<<<<<<< HEAD
-                            <h2 style="color:white;font-size: 24px; margin-bottom: 10px;text-align: center">Exhibition Site
-                                Visitors
-=======
                             <h2 style="color:white;font-size: 24px; margin-bottom: 10px;text-align: center">Exhibition Site Visitors
->>>>>>> 3d79a37482502e0ffe286196d65288515d4637a6
                             </h2>
                             <div style="font-size: 20px; display: flex;">
                                 <div
                                     style="border-radius:10px;flex: 1; background-color: wheat; color: #113B6C; text-align: center; padding: 10px; margin: 5px;">
-<<<<<<< HEAD
-                                    <p id="visitorCount">10,000</p>
-                                </div>
-                            </div>
-                            <script>
-                                let visitorCount = 10000;
-
-
-                                function updateVisitorCount() {
-                                    // You can simulate visitor increments by adding a random number
-                                    // Here, we add a random number between 1 and 10 to simulate real-time changes
-                                    const randomIncrement = Math.floor(Math.random() * 2) + 1;
-                                    visitorCount += randomIncrement;
-
-                                    // Update the displayed visitor count on the webpage
-                                    const visitorCountElement = document.getElementById("visitorCount");
-                                    visitorCountElement.textContent = visitorCount.toLocaleString(); // Format with commas
-                                }
-
-                                // Update the visitor count every 3 seconds (for demonstration purposes)
-                                setInterval(updateVisitorCount, 15000);
-                            </script>
-=======
                                   <p id="visitorCount">{{$global_site->visitor}}</p>
                                 </div>
                             </div>
                             
->>>>>>> 3d79a37482502e0ffe286196d65288515d4637a6
                         </div>
                         <!-- <div style="margin-bottom: 30px;">
                                                                                             <h2 style="color:white;font-size: 24px; margin-bottom: 10px;text-align: center">Registered

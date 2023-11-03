@@ -10,7 +10,7 @@
                         <div class="bread-menu">
                             <ul>
                                 <li><a href="{{ url('/') }}">{{__('cms.home')}}</a></li>
-                                <li><a href="{{ url('notice') }}">{{__('cms.notice')}}</a></li>
+                                <li><a href="{{ url('sister-concern') }}">Sister concern</a></li>
                                 <li><a href="javascript:void(0)">
                                         @if(app()->getLocale() == 'bn')
                                             {{ $data->notice->title_bn ?? $data->notice->title }}
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <section class="news-area archive blog-single section-padding">
+    <section class="news-area archive blog-single section-padding" style="margin-top: 10px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-12">
@@ -60,6 +60,13 @@
 
                                     </p>
                                 </div>
+                                @if(isset($data->notice->attachment->file_url))
+                                    <div class="">
+                                        <object data="{{$data->notice->attachment->file_url}}" type="application/pdf" width="100%" height="500px">
+                                        <p>Unable to display PDF file. <a href="{{$data->notice->attachment->file_url}}">Download</a> instead.</p>
+                                        </object>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>

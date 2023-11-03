@@ -1,4 +1,4 @@
-@extends('front.theme1.layouts.master')
+@extends('front.theme2.layouts.master')
 
 @section('content')
 
@@ -10,7 +10,7 @@
                         <div class="bread-menu">
                             <ul>
                                 <li><a href="{{ url('/') }}">{{__('cms.home')}}</a></li>
-                                <li><a href="javascript:void(0)">{{__('cms.service')}}</a></li>
+                                <li><a href="javascript:void(0)">Sister concern</a></li>
                             </ul>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="single-feature">
                             <div class="icon-head"><i class="fa fa-podcast"></i></div>
-                            <h4><a href="{{ url('service/' . $service->slug) }}" style="height: 55px;">
+                            <h4><a href="{{ url('sister-concern/' . $service->slug) }}" style="height: 55px;">
                                     @if(app()->getLocale() == 'bn')
                                         {!! substr($service->title_bn??$service->title, 0, 30) !!}
                                     @else
@@ -41,7 +41,7 @@
                                 @endif
                             </p>
                             <div class="button">
-                                <a href="{{ url('service/' . $service->slug) }}" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-right"></i>{{__('cms.learn_more')}}</a>
+                                <a href="{{ url('sister-concern/' . $service->slug) }}" class="bizwheel-btn"><i class="fa fa-arrow-circle-o-right"></i>{{__('cms.learn_more')}}</a>
                             </div>
                         </div>
                     </div>

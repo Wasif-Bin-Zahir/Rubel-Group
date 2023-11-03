@@ -83,7 +83,7 @@ class GlobalDataServiceProvider extends ServiceProvider
         // array_push($menus, $this->getSingleMenu('Event', 'ইভেন্ট', url('event')));
 
         // gallery menu
-        // array_push($menus, $this->getGalleryMenu());
+       
 
         array_push($menus, $this->getExhibitionMenu());
 
@@ -97,13 +97,16 @@ class GlobalDataServiceProvider extends ServiceProvider
 
         // contact menu
         // publication menu
+        array_push($menus, $this->getSisterConcern());
         array_push($menus, $this->getPublicationMenu());
-
+       
         // article menu
         array_push($menus, $this->getArticleMenu());
-        array_push($menus, $this->getTravel_stayMenu());
+        array_push($menus,$this->OurMembers());
+        // array_push($menus, $this->getTravel_stayMenu());
         //registration menu
-        array_push($menus, $this->getSingleMenu('Registration', 'রেজিস্ট্রেশন', url('/registration')));
+        // array_push($menus, $this->getSingleMenu('Registration', 'রেজিস্ট্রেশন', url('/registration')));
+        array_push($menus, $this->getGalleryMenu());
         array_push($menus, $this->getContactMenu());
 
         return $menus;
@@ -139,20 +142,7 @@ class GlobalDataServiceProvider extends ServiceProvider
         }
 
         // dropdown
-        $items = json_decode(json_encode([
-            [
-                "title" => "Our Committee",
-                "title_bn" => "আমাদের কমিটি",
-                "link" => url('committee'),
-            ]
-        ]));
-        foreach ($items as $item) {
-            $dMenu = new \stdClass();
-            $dMenu->title = $item->title;
-            $dMenu->title_bn = $item->title_bn ?? $item->title;
-            $dMenu->link = $item->link;
-            array_push($menu->children, $dMenu);
-        }
+    
 
         return $menu;
     }
@@ -160,44 +150,44 @@ class GlobalDataServiceProvider extends ServiceProvider
     private function getExhibitionMenu()
     {
         $menu = new \stdClass();
-        $menu->title = 'Exhibition';
-        $menu->title_bn = 'এক্সিবিশন';
+        $menu->title = 'Our Services';
+        $menu->title_bn = 'Our Services';
         $menu->link = null;
         $menu->children = [];
 
 
         // dropdown
         $items = json_decode(json_encode([
-            [
-                "title" => "Sponsor",
-                "title_bn" => "স্পন্সর",
-                "link" => url('sponsors'),
-            ],
+            // [
+            //     "title" => "Sponsor",
+            //     "title_bn" => "স্পন্সর",
+            //     "link" => url('sponsors'),
+            // ],
             // [
             //     "title" => "Exhibitors List",
             //     "title_bn" => "প্রদর্শকদের তালিকা",
             //     "link" => url('exhibitors-list'),
             // ],
-            [
-                "title" => "Participating Countries",
-                "title_bn" => "অংশগ্রহণকারী দেশগুলো",
-                "link" => url('participating-countries'),
-            ],
-            [
-                "title" => "Floor plan",
-                "title_bn" => "ফ্লোর প্ল্যান",
-                "link" => url('floor-plan'),
-            ],
-            [
-                "title" => "Brochure",
-                "title_bn" => "পুস্তিকা",
-                "link" => url('brochure'),
-            ],
-            [
-                "title" => "Venue master plan",
-                "title_bn" => "ভেন্যু মাস্টার প্ল্যান",
-                "link" => url('venue-master-plan'),
-            ]
+            // [
+            //     "title" => "Participating Countries",
+            //     "title_bn" => "অংশগ্রহণকারী দেশগুলো",
+            //     "link" => url('participating-countries'),
+            // ],
+            // [
+            //     "title" => "Floor plan",
+            //     "title_bn" => "ফ্লোর প্ল্যান",
+            //     "link" => url('floor-plan'),
+            // ],
+            // [
+            //     "title" => "Brochure",
+            //     "title_bn" => "পুস্তিকা",
+            //     "link" => url('brochure'),
+            // ],
+            // [
+            //     "title" => "Venue master plan",
+            //     "title_bn" => "ভেন্যু মাস্টার প্ল্যান",
+            //     "link" => url('venue-master-plan'),
+            // ]
         ]));
         foreach ($items as $item) {
             $dMenu = new \stdClass();
@@ -234,7 +224,16 @@ class GlobalDataServiceProvider extends ServiceProvider
 
         return $menu;
     }
+    
+    private function getSisterConcern(){
+        $menu = new \stdClass();
+        $menu->title = 'Sister Concern';
+        $menu->title_bn = 'গ্যালারী';
+        $menu->link = url('sister-concern');
+        $menu->children = [];
 
+        return $menu;
+    }
     private function getPublicationMenu()
     {
         $menu = new \stdClass();
@@ -273,6 +272,17 @@ class GlobalDataServiceProvider extends ServiceProvider
         $menu->title = 'Article';
         $menu->title_bn = 'আর্টিকেল';
         $menu->link = url('article');
+        $menu->children = [];
+
+        return $menu;
+    }
+
+    private function OurMembers()
+    {
+        $menu = new \stdClass();
+        $menu->title = 'Our members';
+        $menu->title_bn = 'আমাদের সদস্য';
+        $menu->link = url('members?category=1');
         $menu->children = [];
 
         return $menu;

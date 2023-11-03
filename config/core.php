@@ -36,177 +36,89 @@ return [
                     "permission" => "Event",
                 ],
                 [
-                    "name" => "Event invitation",
+                    "name" => "Achievement",
                     "id" => "event-invitation",
+                    "icon" => "fa-arrow-right",
+                    "url" => "/backend/page/2/edit",
+                    "permission" => "Event",
+                ],
+                [
+                    "name" => "License",
+                    "id" => "welcome-message",
                     "icon" => "fa-arrow-right",
                     "url" => "/backend/page/3/edit",
                     "permission" => "Event",
                 ],
                 [
-                    "name" => "Welcome message",
+                    "name" => "Company profile",
+                    "id" => "welcome-message",
+                    "icon" => "fa-arrow-right",
+                    "url" => "/backend/page/4/edit",
+                    "permission" => "Event",
+                ],
+                [
+                    "name" => "Standard of Hiring Criteria",
+                    "id" => "welcome-message",
+                    "icon" => "fa-arrow-right",
+                    "url" => "/backend/page/5/edit",
+                    "permission" => "Event",
+                ],
+                [
+                    "name" => "Chairman Message",
                     "id" => "welcome-message",
                     "icon" => "fa-arrow-right",
                     "url" => "/backend/page/14/edit",
                     "permission" => "Event",
-                ],
-                [
-                    "name" => "Our Committee",
-                    "id" => "welcome-message",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member",
-                    "permission" => "Event",
-                ],
+                ]
+                
             ]
         ],
         [
-            "name" => "Our Committee",
+            "name" => "Our Services",
             "id" => "about-us",
             "icon" => "fas fa-users",
             "url" => "",
             "permission" => "Cms",
             "children" => [
                 [
-                    "name" => "Executive Committee",
-                    "id" => "Executive Committee",
+                    "name" => "How we recruit",
+                    "id" => "about-organiser",
                     "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=1",
+                    "url" => "/backend/page/6/edit",
                     "permission" => "Event",
                 ],
                 [
-                    "name" => "Venue Management",
-                    "id" => "Executive Committee",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=4",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "IT and Media Management",
-                    "id" => "Executive Committee",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=5",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "Branding Sub-Committee",
-                    "id" => "Executive Committee",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=6",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "Printing and Publication",
-                    "id" => "Executive Committee",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=7",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "Int Promotion & Guest Reception ",
-                    "id" => "Executive Committee",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=8",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "Food and Cultural",
-                    "id" => "Executive Committee",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/committee-member?id=9",
-                    "permission" => "Event",
-                ],
-            ]
-        ],
-        [
-            "name" => "Create Sub Committee",
-            "id" => "committee_category",
-            "icon" => "fas fa-bars",
-            "url" => "/backend/committee-category",
-            "permission" => "Common Settings",
-        ],
-
-
-
-
-        [
-            "name" => "Exhibition",
-            "id" => "Exhibition",
-            "icon" => "fas fa-chalkboard-teacher",
-            "url" => "",
-            "permission" => "Cms",
-            "children" => [
-                [
-                    "name" => "Sponsors",
-                    "id" => "sponsors",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/content?category_id=5",
-                    "permission" => "Event",
-                ],
-                // [
-                //     "name" => "Exhibitors-list",
-                //     "id" => "exhibitors-list",
-                //     "icon" => "fa-arrow-right",
-                //     "url" => "/backend/content?category_id=6",
-                //     "permission" => "Event",
-                // ],
-                [
-                    "name" => "Exhibitors List-Alphabetical Order",
-                    "id" => "exhibitors-list-alphabetical-order",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/page/19/edit",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "Exhibitors List - Hall Wise",
-                    "id" => "exhibitors-list-hallwise",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/page/15/edit",
-                    "permission" => "Event",
-                ],
-                // [
-                //     "name" => "Venue plan",
-                //     "id" => "venue-plan",
-                //     "icon" => "fa-arrow-right",
-                //     "url" => "/backend/page/2/edit",
-                //     "permission" => "Event",
-                // ],
-                [
-                    "name" => "Schedule",
-                    "id" => "schedule",
+                    "name" => "What we do",
+                    "id" => "event-invitation",
                     "icon" => "fa-arrow-right",
                     "url" => "/backend/page/8/edit",
                     "permission" => "Event",
                 ],
                 [
-                    "name" => "Floor plan",
-                    "id" => "floor-plan",
+                    "name" => "License",
+                    "id" => "Training partnership",
                     "icon" => "fa-arrow-right",
-                    "url" => "/backend/content?category_id=8",
+                    "url" => "/backend/page/15/edit",
                     "permission" => "Event",
                 ],
                 [
-                    "name" => "Brochure",
-                    "id" => "brochure",
+                    "name" => "We serve globally",
+                    "id" => "welcome-message",
                     "icon" => "fa-arrow-right",
-                    "url" => "/backend/content?category_id=9",
+                    "url" => "/backend/page/16/edit",
                     "permission" => "Event",
-                ],
-                [
-                    "name" => "Venue master plan",
-                    "id" => "venue-master-plan",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/content?category_id=10",
-                    "permission" => "Event",
-                ],
-                [
-                    "name" => "Event Management Company",
-                    "id" => "event-management-company-details",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/content?category_id=10",
-                    "url" => "/backend/page/19/edit",
-                    "permission" => "Event",
-                ],
+                ]
             ]
         ],
+
+        [
+            "name" => "Members",
+            "id" => "committee",
+            "icon" => "fa-arrow-right",
+            "url" => "/backend/committee-member",
+            "permission" => "Content",
+        ],
+       
         [
             "name" => "Publication",
             "id" => "cms",
@@ -214,9 +126,6 @@ return [
             "url" => "",
             "permission" => "Cms",
             "children" => [
-
-
-
                 [
                     "name" => "News",
                     "id" => "news",
@@ -235,7 +144,13 @@ return [
 
             ]
         ],
-
+        [
+            "name" => "Sister concern",
+            "id" => "news",
+            "icon" => "fa-arrow-right",
+            "url" => "/backend/content?category_id=4",
+            "permission" => "Content",
+        ],
         [
             "name" => "Article",
             "id" => "article",
@@ -261,53 +176,22 @@ return [
         ],
 
 
-        [
-            "name" => "Travel & Stay ",
-            "id" => "travel_&_stay",
-            "icon" => "fas fa-plane-departure",
-            "url" => "",
-            "permission" => "Cms",
-            "children" => [
-                [
-                    "name" => "Hotel Information",
-                    "id" => "hotel-information",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/content?category_id=11",
-                    "permission" => "Cms",
-                ],
-                [
-                    "name" => "Visa Information",
-                    "id" => "event-invitation",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/page/17/edit",
-                    "permission" => "Cms",
-                ],
-                [
-                    "name" => "About Dhaka",
-                    "id" => "about-dhaka",
-                    "icon" => "fa-arrow-right",
-                    "url" => "/backend/page/18/edit",
-                    "permission" => "Cms",
-                ],
-            ]
-        ],
 
-
-        [
-            "name" => "Registration",
-            "id" => "registration",
-            "icon" => "far fa-copy",
-            "url" => "/backend/registration",
-            "permission" => "Registration",
-            "children" => []
-        ],
+        // [
+        //     "name" => "Registration",
+        //     "id" => "registration",
+        //     "icon" => "far fa-copy",
+        //     "url" => "/backend/registration",
+        //     "permission" => "Registration",
+        //     "children" => []
+        // ],
 
 
 
 
 
         [
-            "name" => "Participating Countries",
+            "name" => "Countries",
             "id" => "participating-countries",
             "icon" => "fas fa-flag",
             "url" => "/backend/content?category_id=7",
@@ -382,7 +266,7 @@ return [
                     "permission" => "Common Settings",
                 ],
                 [
-                    "name" => "Committee Category",
+                    "name" => "Member Category",
                     "id" => "committee_category",
                     "icon" => "fa-arrow-right",
                     "url" => "/backend/committee-category",
@@ -405,13 +289,13 @@ return [
             ]
         ],
 
-        [
-            "name" => "Countries & Exhibitors Number",
-            "id" => "site",
-            "icon" => "fa-arrow-right",
-            "url" => "/backend/numbers",
-            "permission" => "Site",
-        ],
+        // [
+        //     "name" => "Countries & Exhibitors Number",
+        //     "id" => "site",
+        //     "icon" => "fa-arrow-right",
+        //     "url" => "/backend/numbers",
+        //     "permission" => "Site",
+        // ],
 
         // [
         //     "name" => "App Settings",

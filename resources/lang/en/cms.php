@@ -36,7 +36,7 @@ return [
     "notice" => "Notice",
     "faq" => "Frequently Asked Questions",
     "service" => "Service",
-    "committee" => "Committee",
+    "committee" => "Members",
     "schedule" => "Schedule",
     "sponsors" => "Our Sponsors",
     "participants" => "Our participants",

@@ -19,7 +19,7 @@ Route::resource('faq', 'FaqController')->only(['index']);
 // gallery routes...
 Route::resource('gallery', 'GalleryController')->only(['index', 'show']);
 // committee routes...
-Route::resource('committee', 'CommitteeController')->only(['index']);
+Route::resource('members', 'CommitteeController')->only(['index']);
 // directory routes...
 Route::resource('directory', 'DirectoryController')->only(['index']);
 Route::get('directory/{username}', 'DirectoryController@show');
@@ -36,7 +36,7 @@ Route::resource('participating-countries', 'participatingCountriesController')->
 
 // schedule routes...
 Route::resource('schedule', 'ScheduleController')->only(['index', 'show']);
-Route::resource('brochure', 'BrochureController')->only(['index', 'show']);
+Route::resource('sister-concern', 'BrochureController')->only(['index', 'show']);
 Route::resource('floor-plan', 'FloorplanController')->only(['index', 'show']);
 Route::resource('hotel-information', 'HotelinformationController')->only(['index', 'show']);
 Route::resource('venue-master-plan', 'VenuemasterplanController')->only(['index', 'show']);

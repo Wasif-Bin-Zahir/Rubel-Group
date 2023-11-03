@@ -1,4 +1,4 @@
-@extends('front.theme1.layouts.master')
+@extends('front.theme2.layouts.master')
 
 @section('content')
 
@@ -10,7 +10,7 @@
                         <div class="bread-menu">
                             <ul>
                                 <li><a href="{{ url('/') }}">{{__('cms.home')}}</a></li>
-                                <li><a href="{{ url('service') }}">{{__('cms.service')}}</a></li>
+                                <li><a href="{{ url('sister-concern') }}">Sister concern</a></li>
                                 <li>
                                     <a href="javascript:void(0)">
                                         @if(app()->getLocale() == 'bn')
